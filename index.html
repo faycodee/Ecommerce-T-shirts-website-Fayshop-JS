@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FayShop | Home</title>
+    <link rel="icon" href="img/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="package/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+ <style>
+ 
+    /* Add CSS for opacity animation */
+    .animate-opacity {
+
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+    .animate-scale{ 
+      transform: scale(0.8);
+      transition: scale 1s ease;
+    }
+    .animate-opacity.animated {
+      opacity: 1;
+    }
+    .animate-scale.animated {
+      transform: 1;
+    }
+  </style>
+ </style>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+  </head>
+
+  <body>
+  
+
+    <header>
+      <h3 onclick="location.href='index.html'">Fay<span>Shop</span></h3>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html"> Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html" id="cart"
+            ><i class="fa fa-shopping-cart" aria-hidden="true"></i
+          ></a>
+          <a href="#" id="close" onclick="baar()"
+            ><i class="far fa-times"></i
+          ></a>
+        </li>
+      </ul>
+      <div class="mobile">
+        <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        <i id="bar" class="fas fa-outdent" onclick="baar()"></i>
+      </div>
+    </header>
+    <button id="totop" class="normal">
+      <i class="fa fa-level-up" aria-hidden="true"></i>
+    </button>
+    <div id="body1">
+      <div class="Home">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+
+            <div class="swiper-slide">
+              <section class="hero">
+                <div class="text-hero">
+                  <h2>Wellcome</h2>
+                </div>
+              </section>
+            </div>
+            <div class="swiper-slide">
+              <section class="hero1">
+                <div class="text-hero">
+                  <h4>trade-in-offer</h4>
+                  <h2>Great discounts available</h2>
+                  <h1>on all products</h1>
+                  <p>Save more with coupons & up to70% off !</p>
+                  <button onclick="location.href='shop.html'">Shop Now</button>
+                </div>
+              </section>
+            </div>
+            <div class="swiper-slide">
+              <section class="hero2">
+                <div class="text-hero">
+                  <h4>trade-in-offer</h4>
+                  <h2>Acquire the clothes</h2>
+                  <h1>of your choice</h1>
+                  <p>Save more with coupons & up to70% off !</p>
+                  <button onclick="location.href='shop.html'">Shop Now</button>
+                </div>
+              </section>
+            </div>
+            <div class="swiper-slide">
+              <section class="hero3">
+                <div class="text-hero">
+                  <h4>trade-in-offer</h4>
+                  <h2>Purchase the clothes you fancy</h2>
+                  <h1>on our website</h1>
+                  <p>Save more with coupons & up to70% off !</p>
+                  <button onclick="location.href='shop.html'">Shop Now</button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <button id="stop" class="stop" onclick="stop()">Stop</button>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev" style="color: black"></div>
+        <div class="swiper-button-next" style="color: black"></div>
+      </div>
+      <div id="frature" class="section-p1 animated">
+        <div class="fe-box">
+          <img src="img/features/f1.png" alt="" />
+          <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+          <img src="img/features/f2.png" alt="" />
+          <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+          <img src="img/features/f3.png" alt="" />
+          <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+          <img src="img/features/f4.png" alt="" />
+          <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+          <img src="img/features/f5.png" alt="" />
+          <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+          <img src="img/features/f6.png" alt="" />
+          <h6>F24/7 Support</h6>
+        </div>
+      </div>
+      <section id="product1" class="section-p1">
+        <h2 class="animate-opacity ">Featured Products</h2>
+        <p id="Summer">Summer Colllection New Modern Design</p>
+        <div class="pro-conti" id="proconti1"></div>
+      </section>
+
+      <section id="banner" class="section-m1">
+        <div id="fixedb"></div>
+        <h4>Repair Services</h4>
+        <h2>Up to <span>80% Off </span>- All t-Shirts & Accessories</h2>
+        <button class="normal" onclick="location.href='shop.html'">
+          Explore More
+        </button>
+      </section>
+
+      <section id="product1" class="section-p1">
+        <h2 class="animate-opacity ">New Arrivals</h2>
+        <p id="Summer">Summer Colllection New Modern Design</p>
+        <div class="pro-conti" id="proconti2"></div>
+      </section>
+      <section id="sm-banner" class="section-m1">
+        <div class="banner-row1">
+          <div class="banner-box">
+            <h4>insane bargains</h4>
+            <h2>Purchase one, receive one complimentary</h2>
+            <p>
+              The top-notch traditional dress is available at Fayshop on sale
+            </p>
+            <button>Learn more</button>
+          </div>
+          <div class="banner-box box2">
+            <h4>spring/summer</h4>
+            <h2>upcomming season</h2>
+            <p>
+              The top-notch traditional dress is available at Fayshop on sale
+            </p>
+            <button>Learn more</button>
+          </div>
+        </div>
+        <div class="banner-row1">
+          <div class="banner-box r2 r2-box1">
+            <h2>SEASONAL SALE</h2>
+            <p>Winter Collection -50% OFF</p>
+          </div>
+          <div class="banner-box r2 r2-box2">
+            <h2>SEASONAL SALE</h2>
+            <p>Winter Collection -50% OFF</p>
+          </div>
+          <div class="banner-box r2 r2-box3">
+            <h2>SEASONAL SALE</h2>
+            <p>Winter Collection -50% OFF</p>
+          </div>
+        </div>
+        <div class="banner-row2"></div>
+      </section>
+    </div>
+    <div id="body2">
+      <button class="normal" id="back" onclick="location.href='shop.html'">
+        <i class="fal fa-long-arrow-alt-left"></i>
+      </button>
+      <section id="proDetails" class="section-p1">
+        <div class="single-pro-img">
+          <img
+            src="img/products/man/mc0.jpg"
+            alt=""
+            width="100%"
+            id="MainImg"
+          />
+          <div class="small-img-group">
+            <div class="small-img-col">
+              <img
+                src="img/products/man/mc1.jpg"
+                width="100%"
+                width="100%"
+                onclick=""
+                class="small-img"
+              />
+            </div>
+            <div class="small-img-col">
+              <img
+                src="img/products/man/mc2.jpg"
+                width="100%"
+                onclick=""
+                class="small-img"
+              />
+            </div>
+            <div class="small-img-col">
+              <img
+                src="img/products/man/mc3.jpg"
+                width="100%"
+                onclick=""
+                class="small-img"
+              />
+            </div>
+            <div class="small-img-col">
+              <img
+                src="img/products/man/mc4.jpg"
+                width="100%"
+                onclick=""
+                class="small-img"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="single-pro-details">
+          <h6>Home / T-shirts</h6>
+          <h4>Mens 's & women Fashion T shirts</h4>
+          <h2>$139.00</h2>
+          <select>
+            <option value="">Select Size</option>
+            <option value="">XL</option>
+            <option value="">XXL</option>
+            <option value="">Small</option>
+            <option value="">Large</option>
+          </select>
+          <input type="number" value="1" />
+          <button class="normal">Add to Cart</button>
+          <h4>Product Deatails</h4>
+          <span>
+            The t-shirt displayed is actually a short-sleeved button-up shirt
+            rather than a t-shirt. It features a vibrant and colorful print with
+            an abstract design. The pattern includes various shapes and
+            botanical elements such as leaves and flowers in a mixture of colors
+            including yellow, blue, red, white, and shades of green. The shirt
+            has a casual and relaxed fit with a fold-down collar and a visible
+            button placket at the front. The hem appears to be straight, and it
+            seems suitable for a casual, summery wardrobe. The background color
+            of the shirt seems to be primarily a mustard yellow, with the print
+            overlaid on top.
+          </span>
+        </div>
+      </section>
+      <section id="product1" class="section-p1">
+        <h2>Featured Prducts</h2>
+        <p id="Summer">Summer Colllection New Modern Design</p>
+        <div class="pro-conti">
+          <div class="pro">
+            <img src="img/products/man/mc0.jpg" alt="" />
+            <div class="des">
+              <span>puma</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>$78</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+          </div>
+          <div class="pro arr">
+            <img src="img/products/man/mc1.jpg" alt="" />
+            <div class="des">
+              <span>puma</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>$78</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+          </div>
+
+          <div class="pro">
+            <img src="img/products/man/mc2.jpg" alt="" />
+            <div class="des">
+              <span>puma</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>$100</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="img/products/man/mc3.jpg" alt="" />
+            <div class="des">
+              <span>puma</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>$100</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+        <h4>Sign Up For Newsletter</h4>
+        <p>
+          Get E-MAIL updates about our latsest shop and
+          <span>special offers.</span>
+        </p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your email address" />
+        <button>Sign Up</button>
+      </div>
+    </section>
+    <footer class="section-p1">
+      <div class="col">
+        <h2>Fay<span>Shop</span></h2>
+        <h4>Contact</h4>
+        <p><strong>Address:</strong>morocco fes city wahran street 27</p>
+        <p><strong>Phone:</strong>+212 61 34 87 81 4</p>
+        <p><strong>Hours:</strong>10:00-18:00 Mon-Sat</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="img/pay/app.jpg" alt="" />
+          <img src="img/pay/play.jpg" alt="" />
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="img/pay/pay.png" alt="" />
+      </div>
+
+      <div class="copyright">
+        <p>© 2024,Faysal oumzil - HTML CSS Ecommerce website</p>
+      </div>
+    </footer>
+
+    <script src="package/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          650: { slidesPerView: 1 },
+          768: { slidesPerView: 1 },
+          1024: { slidesPerView: 1 },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+
+      let isRunning = true;
+      let x = setInterval(() => {
+        if (isRunning) {
+          swiper.slideNext();
+        }
+      }, 4000);
+
+      function stop() {
+        let stopbutton = document.getElementById("stop");
+        isRunning = !isRunning;
+        if (isRunning) {
+          stopbutton.innerHTML = "Stop";
+          stopbutton.style.border = "none";
+          stopbutton.style.borderRight = " 1px solid";
+          stopbutton.style.borderLeft = " 1px solid";
+        } else {
+          stopbutton.innerHTML = "Keep";
+          stopbutton.style.border = "none";
+          stopbutton.style.borderTop = " 1px solid";
+          stopbutton.style.borderBottom = " 1px solid";
+        }
+      }
+    </script>
+    <script src="script.js"></script>
+    <script>
+      const procontii = document.getElementById("proconti1");
+      const proconti2 = document.getElementById("proconti2");
+
+      function createElementhome1(data) {
+        for (let index = 0; index < data.length - 8; index++) {
+          //creation Elements
+          let Cpro = document.createElement("div");
+          Cpro.classList.add("pro");
+          Cpro.setAttribute("onclick", "tosproduct(" + index + ")");
+          let img = document.createElement("img");
+          img.src = data[index].Photo;
+          let des = document.createElement("div");
+          des.classList.add("des");
+          let span = document.createElement("span");
+          span.innerHTML = data[index].Manufacturer;
+          let h5 = document.createElement("h5");
+          h5.innerHTML = data[index].name;
+          let starclass = document.createElement("div");
+          starclass.classList.add("star");
+          for (let i = 0; i < Number(data[index].Ratings); i++) {
+            let i = document.createElement("i");
+            i.classList.add("fas");
+            i.classList.add("fa-star");
+            starclass.appendChild(i);
+          }
+          let h4 = document.createElement("h4");
+          h4.innerHTML = data[index].Prix;
+          let a = document.createElement("a");
+          a.innerHTML = '<i class="fal fa-shopping-cart cart"></i>';
+          a.setAttribute("onclick", "tosproduct(" + index + ")");
+
+          // append Elements
+          Cpro.appendChild(img);
+          Cpro.appendChild(des);
+          Cpro.appendChild(a);
+          des.appendChild(span);
+          des.appendChild(h5);
+          des.appendChild(starclass);
+          des.appendChild(h4);
+          procontii.appendChild(Cpro);
+        }
+      }
+      createElementhome1(dataProP1);
+
+      function createElementhome2(data) {
+        for (let index = 8; index < data.length; index++) {
+          //creation Elements
+          let Cpro = document.createElement("div");
+          Cpro.classList.add("pro");
+          Cpro.setAttribute("onclick", "tosproduct(" + index + ")");
+          let img = document.createElement("img");
+          img.src = data[index].Photo;
+          let des = document.createElement("div");
+          des.classList.add("des");
+          let span = document.createElement("span");
+          span.innerHTML = data[index].Manufacturer;
+          let h5 = document.createElement("h5");
+          h5.innerHTML = data[index].name;
+          let starclass = document.createElement("div");
+          starclass.classList.add("star");
+          for (let i = 0; i < Number(data[index].Ratings); i++) {
+            let i = document.createElement("i");
+            i.classList.add("fas");
+            i.classList.add("fa-star");
+            starclass.appendChild(i);
+          }
+          let h4 = document.createElement("h4");
+          h4.innerHTML = data[index].Prix;
+          let a = document.createElement("a");
+          a.innerHTML = '<i class="fal fa-shopping-cart cart"></i>';
+
+          // append Elements
+          Cpro.appendChild(img);
+          Cpro.appendChild(des);
+          Cpro.appendChild(a);
+          des.appendChild(span);
+          des.appendChild(h5);
+          des.appendChild(starclass);
+          des.appendChild(h4);
+          proconti2.appendChild(Cpro);
+        }
+      }
+      createElementhome2(dataProP1);
+
+      function tosproduct(idShirt) {
+        document.getElementById("body2").style.display = "block";
+        document.getElementById("body1").style.display = "none";
+        let MainImg = document.getElementById("MainImg");
+
+        let Prix = document.querySelector(".single-pro-details h2");
+        totop();
+        MainImg.src = allProducts[idShirt].Photo;
+        smallimg[0].src = allProducts[idShirt + 4].Photo;
+        smallimg[1].src = allProducts[idShirt + 8].Photo;
+        smallimg[2].src = allProducts[idShirt + 12].Photo;
+        smallimg[3].src = allProducts[idShirt + 16].Photo;
+        Prix.innerHTML = allProducts[idShirt].Prix;
+      }
+      let smallimg = document.getElementsByClassName("small-img");
+      smallimg[0].onclick = function () {
+        let save = MainImg.src;
+        MainImg.src = smallimg[0].src;
+        smallimg[0].src = save;
+      };
+      smallimg[1].onclick = function () {
+        let save = MainImg.src;
+        MainImg.src = smallimg[1].src;
+        smallimg[1].src = save;
+      };
+      smallimg[2].onclick = function () {
+        let save = MainImg.src;
+        MainImg.src = smallimg[2].src;
+        smallimg[2].src = save;
+      };
+      smallimg[3].onclick = function () {
+        let save = MainImg.src;
+        MainImg.src = smallimg[3].src;
+        smallimg[3].src = save;
+      };
+    </script>
+ <script>
+  // Function to add animation class when element comes into view
+  function animateOnScroll() {
+    const elements = document.querySelectorAll('.animate-opacity');
+    elements.forEach(element => {
+      if (isElementInViewport(element)) {
+        element.classList.add('animated');
+      }
+    });
+    const elements2 = document.querySelectorAll('.animate-scale');
+    elements.forEach(element => {
+      if (isElementInViewport(element)) {
+        element.classList.add('animated');
+      }
+    });
+  }
+
+  // Function to check if element is in viewport
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Event listener for scroll to trigger animation
+  window.addEventListener('scroll', animateOnScroll);
+  // Trigger animation on page load
+  animateOnScroll();
+</script>
+
+  </body>
+</html>

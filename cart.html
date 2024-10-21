@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FayShop | Cart</title>
+    <link rel="icon" href="img/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="package/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+  </head>
+
+  <body>
+    <header>
+      <h3 onclick="location.href='index.html'">Fay<span>Shop</span></h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html" id="cart" class="active"
+            ><i class="fa fa-shopping-cart" aria-hidden="true"></i
+          ></a>
+          <a href="#" id="close" onclick="baar()"
+            ><i class="far fa-times"></i
+          ></a>
+        </li>
+      </ul>
+      <div class="mobile">
+        <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        <i id="bar" class="fas fa-outdent" onclick="baar()"></i>
+      </div>
+    </header>
+    <button id="totop" class="normal">
+      <i class="fa fa-level-up" aria-hidden="true"></i>
+    </button>
+
+    <section class="about-header" id="page-header cart">
+      <h1>#Shop now !</h1>
+      <p>LEAVE A MESSAGE ,We love to hear from you!</p>
+    </section>
+    <section id="cart" class="section-p1">
+      <table id="table">
+        <thead>
+          <tr>
+            <td>Remove</td>
+            <td>Image</td>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Subtotal</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- <td><img src="img/products/man/m10.jpg" alt="" /></td>
+            <td>name</td>
+            <td>$118</td>
+            <td><input type="number" value="1" /></td>
+            <td></td> -->
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <button class="normal" onclick="deleteAllItem()">Remove All</button>
+    </section>
+    <section id="cart-add" class="section-p1">
+      <div id="coupon">
+        <h3>Apply Coupon</h3>
+        <div>
+          <input type="text" placeholder="Entrer Your Coupon" />
+          <button class="normal" onclick="Coupon()">Apply</button>
+        </div>
+      </div>
+      <div id="subtotal">
+        <h3>Cart Totals</h3>
+        <table>
+          <tr>
+            <td>Cart Subtotal</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td>Free</td>
+          </tr>
+          <tr>
+            <td>Coupon</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td><strong></strong></td>
+          </tr>
+        </table>
+        <button class="normal">Proceed to checkout</button>
+      </div>
+    </section>
+
+    <footer class="section-p1">
+      <div class="col">
+        <h2>Fay<span>Shop</span></h2>
+        <h4>Contact</h4>
+        <p><strong>Address:</strong>morocco fes city wahran street 27</p>
+        <p><strong>Phone:</strong>+212 61 34 87 81 4</p>
+        <p><strong>Hours:</strong>10:00-18:00 Mon-Sat</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter-f"></i>
+            <i class="fab fa-instagram-f"></i>
+            <i class="fab fa-pinterest-f"></i>
+            <i class="fab fa-youtube-f"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="img/pay/app.jpg" alt="" />
+          <img src="img/pay/play.jpg" alt="" />
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="img/pay/pay.png" alt="" />
+      </div>
+
+      <div class="copyright">
+        <p>© 2024,Faysal oumzil - HTML CSS Ecommerce website</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+
+    <script>
+      // Retrieve data from localStorage
+      let savedData = JSON.parse(localStorage.getItem("tabCart"));
+
+      // Function to display data in table
+      function displayTable(data) {
+        let tableRows = "";
+        for (let i = 0; i < data.length; i++) {
+          let item = data[i];
+          let quantity = 1; // Default quantity
+          let subtotal = item.Prix; // Default subtotal
+          tableRows += `
+                   <tr>
+                     <td><a onclick="deleteItem(${i})"><i class="far fa-times-circle"></i></a></td>
+                     <td><img src="${item.Photo}" alt="Product Image"></td>
+                     <td>${item.name}</td>
+                     <td>${item.Prix}</td>
+                     <td><input type="number" value="${quantity}" id="${i}" onchange="updateQuantity(${i}, this.value)"></td>
+                     <td>${subtotal}</td>
+                   </tr>`;
+        }
+        document.querySelector("#cart tbody").innerHTML = tableRows;
+      }
+
+      displayTable(savedData);
+
+      function deleteItem(id) {
+        if (confirm("Are you sure you want to remove this product?")) {
+          savedData.splice(id, 1);
+          localStorage.setItem("tabCart", JSON.stringify(savedData)); // Update localStorage
+          displayTable(savedData); // Update the displayed table
+        }
+      }
+
+      
+      function updateQuantity(id, quantity) {
+        let price = savedData[id].Prix;
+        let subtotal = Number(price.substring(1)) * Number(quantity);
+        document.querySelector(
+          "#cart tbody tr:nth-child(" + (id + 1) + ") td:nth-child(6)"
+        ).textContent = subtotal;
+        total();
+      }
+
+      function deleteAllItem() {
+        if (confirm("Are you sure you want to remove all products?")) {
+          localStorage.removeItem("tabCart");
+          location.reload();
+        }
+      }
+      let CouponN;
+      function Coupon() {
+        let couupon = document.querySelector("#coupon input");
+
+        if (couupon.value.toLowerCase() == "faycal" ) {
+          CouponN = 50;
+          alert("you have now -50% in all products !");
+          total();
+
+          couupon.value = "";
+        } 
+        else if (couupon.value.toLowerCase() == "i am sad" ) {
+          CouponN = 90;
+          alert("you have now -90% in all products ,Be happy now !");
+          total();
+        }else {
+          alert("we dont find coupon with this code !");
+        }
+      }
+      total();
+     
+      function total() {
+        let subtotal = document.querySelector(
+          "#subtotal table tr:nth-child(1) td:nth-child(2)"
+        );
+        let cop = document.querySelector(
+          "#subtotal table tr:nth-child(3) td:nth-child(2)"
+        );
+        let total = document.querySelector(
+          "#subtotal table tr:nth-child(4) td:nth-child(2)"
+        );
+
+        let totalprix = 0;
+        for (let index = 0; index < savedData.length; index++) {
+          let quantity = document.querySelector(
+            "#cart tbody tr:nth-child(" +
+              (index + 1) +
+              ") td:nth-child(5) input"
+          ).value;
+          let price = savedData[index].Prix.substring(1); 
+          let subtotalValue = parseFloat(price) * parseInt(quantity);
+          totalprix += subtotalValue;
+          document.querySelector(
+            "#cart tbody tr:nth-child(" + (index + 1) + ") td:nth-child(6)"
+          ).textContent = subtotalValue.toFixed(2); 
+        }
+
+        subtotal.textContent = (totalprix.toFixed(2)); 
+        cop.textContent = "-" + (CouponN ? CouponN : 0) + "%"; 
+        let discountedPrice =
+          totalprix - (CouponN ? (CouponN / 100) * totalprix : 0);
+        total.textContent = "$ "+ discountedPrice.toFixed(2); 
+      }
+    </script>
+  </body>
+</html>
